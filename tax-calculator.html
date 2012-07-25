@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Tax Calculator | UP ITDC HRIS </title>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <script src="jquery.min.js"></script>
+        <script src="jquery-ui.min.js"></script>
+        <script src="tax-calc.js"></script>
+        <script>
+            
+            $(document).ready(function(){
+                var h = window.innerHeight;
+                var w = window.innerWidth;
+                $('.body').css('min-height',h-206);
+                $('nav').css('height',$('.body').height()-20);
+            });
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="wrapper">
+				
+			</div><!-- end of wrapper -->
+        </header>
+        <div class="banner">
+			<div class="wrapper">
+				<span class="up">University of the Philippines</span>
+				<span class="itdc">Information Technology Development Center</span>
+			</div><!-- end of wrapper -->
+        </div><!-- end of nav -->
+        <div class="body">
+			<nav>
+				<div class="wrapper">
+					<div class="title">
+						<span>hris</span>
+						<div style="clear:both"></div>
+					</div>
+					<div class="links">
+						<div><a href="\">home</a></div>
+						<div><a href="">tax calculator</a></div>
+						<div><a href="">member login</a></div>
+						<div><a href="">about</a></div>
+						<div style="clear:both"></div>
+					</div>
+					<div style="clear:both"></div>
+				</div><!-- end of wrapper -->
+				<div style="clear:both"></div>
+			</nav>
+			<div class="bodywrapper">
+				<span class="page-title">Tax Calculator</span>
+				<div class="">
+					<div class="fieldWrapper">
+						<input type="text" name="salary" />
+						<button class="button">BUTTON</button>
+						<script>
+							$('.button').click(function(){
+								alert(computeTax("a",10000));
+							});
+						</script>
+					</div>
+				</div>
+			</div><!-- end of wrapper -->
+			<div style="clear:both"></div>
+        </div><!-- end of body -->
+        <footer>
+			<div class="wrapper">
+				
+			</div><!-- end of wrapper -->
+        </footer><!-- end of footer -->
+        <div style="clear:both"></div>
+    </body>
+</html>
