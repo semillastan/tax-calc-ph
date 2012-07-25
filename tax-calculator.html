@@ -51,10 +51,27 @@
 				<div class="">
 					<div class="fieldWrapper">
 						<input type="text" name="salary" />
-						<button class="button">BUTTON</button>
+						<button class="button">Compute</button>
+						<div class="status">
+							<div class="without">
+								<span class="title">Employees WITHOUT qualified dependent</span>
+								<input type="radio" name="status" value="1">Z      </input>
+								<input type="radio" name="status" value="2" checked>S/ME   </input>
+							</div>
+							<div class="with">
+								<span class="title">Single/Married employee WITH qualified dependent child(ren)</span>
+								<input type="radio" name="status" value="3">ME1/S1 </input>
+								<input type="radio" name="status" value="4">ME2/S2 </input>
+								<input type="radio" name="status" value="5">ME3/S3 </input>
+								<input type="radio" name="status" value="6">ME4/S4 </input>
+							</div>
+						</div>
 						<script>
 							$('.button').click(function(){
-								alert(computeTax("a",10000));
+								var status = $('input[name="status"]:checked').val();
+								var salary = $('input[name="salary"]').val();
+								
+								computeTaxSemi(parseInt(status),parseInt(salary));
 							});
 						</script>
 					</div>
